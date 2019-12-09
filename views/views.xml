@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <record id="view_report_balance" model="ir.ui.view">
+      <field name="name">view_balance_tree.tree</field>
+      <field name="model">vit_report_balance.vit_report_balance</field>
+      <field name="type">tree</field>
+      <field name="priority" eval="8"/>
+      <field name="arch" type="xml">
+        <tree string="reportbalance">
+          <field name="name"/>
+          <field name="date_start"/>
+          <field name="date_end"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_report_balance_form" model="ir.ui.view">
+      <field name="name">view_balance_tree.form</field>
+      <field name="model">vit_report_balance.vit_report_balance</field>
+      <field name="type">form</field>
+      <field name="priority" eval="8"/>
+      <field name="arch" type="xml">
+        <form string="Report Balance">
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" string="Report Balance"/>
+              <h1>
+                <field name="name"/>
+              </h1>
+            </div>
+            <group>
+              <field name="date_start"/>
+              <field name="date_end"/>
+              <field name="company_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+  </data>
+</odoo>
