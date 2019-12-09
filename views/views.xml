@@ -34,9 +34,39 @@
               <field name="date_end"/>
               <field name="company_id"/>
             </group>
+            <notebook>
+              <page string= "Details">
+                <field name="report_details_ids">
+                  <tree string="details" editable="bottom">
+                    <field name="product_id"/>
+                    <field name="product_code"/>
+                    <field name="total_so_bln_lalu"/>
+                    <field name="total_so_bln_ini"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
+
+
+
+      <!-- <record id="view_report_balance_so" model="ir.ui.view">
+        <field name="name">vit_report_balance_so_tree.tree</field>
+        <field name="model">vit_report_balance_so</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+          <tree string="reportbalanceso">
+            <field name="report_id"/>
+            <field name="product_id"/>
+            <field name="product_code"/>
+            <field name="total_so_bln_lalu"/>
+            <field name="total_so_bln_ini"/>
+          </tree>
+        </field>
+      </record> -->
 
     </record>
   </data>
